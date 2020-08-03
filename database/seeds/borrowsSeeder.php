@@ -13,47 +13,47 @@ class borrowsSeeder extends Seeder
     {
         DB::table('borrows')->insert([
             
-            'book_id' 		=> '1',
-            'user_id' 		=> '1',
+            'borrow_book_id' 		=> '1',
+            'borrow_user_id' 		=> '1',
             'borrow_date' 	=> '2020-08-04',
-            'back_date' 	=> '2020-08-04',
-            'fine' 			=> '',
+            'borrow_back_date' 	=> '2020-08-04',
+            'borrow_fine' 			=> '',
         ]);
 
         DB::table('borrows')->insert([
             
-            'book_id' 		=> '5',
-            'user_id' 		=> '2',
+            'borrow_book_id' 		=> '5',
+            'borrow_user_id' 		=> '2',
             'borrow_date' 	=> '2020-08-04',
-            'back_date' 	=> '2020-08-04',
-            'fine' 			=> '',
+            'borrow_back_date' 	=> '2020-08-04',
+            'borrow_fine' 			=> '',
         ]);
 
         DB::table('borrows')->insert([
             
-            'book_id' 		=> '4',
-            'user_id' 		=> '3',
+            'borrow_book_id' 		=> '4',
+            'borrow_user_id' 		=> '3',
             'borrow_date' 	=> '2020-08-04',
-            'back_date' 	=> '2020-08-04',
-            'fine' 			=> '2000',
+            'borrow_back_date' 	=> '2020-08-04',
+            'borrow_fine' 			=> '2000',
         ]);
 
         DB::table('borrows')->insert([
             
-            'book_id' 		=> '3',
-            'user_id' 		=> '4',
+            'borrow_book_id' 		=> '3',
+            'borrow_user_id' 		=> '4',
             'borrow_date' 	=> '2020-08-04',
-            'back_date' 	=> '2020-08-04',
-            'fine' 			=> '',
+            'borrow_back_date' 	=> '2020-08-04',
+            'borrow_fine' 			=> '',
         ]);
 
         DB::table('borrows')->insert([
             
-            'book_id' 		=> '2',
-            'user_id' 		=> '5',
+            'borrow_book_id' 		=> '2',
+            'borrow_user_id' 		=> '5',
             'borrow_date' 	=> '2020-08-04',
-            'back_date' 	=> '2020-08-04',
-            'fine' 			=> '5000',
+            'borrow_back_date' 	=> '2020-08-04',
+            'borrow_fine' 			=> '5000',
         ]);
 
 

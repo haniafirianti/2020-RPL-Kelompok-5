@@ -15,11 +15,11 @@ class CreateBorrowsTable extends Migration
     {
         Schema::create('borrows', function (Blueprint $table) {
             $table->bigIncrements('borrow_id');
-            $table->biginteger('book_id');
-            $table->biginteger('user_id');
+            $table->biginteger('borrow_book_id');
+            $table->biginteger('borrow_user_id');
             $table->date('borrow_date');
-            $table->date('back_date');
-            $table->string('fine');
+            $table->date('borrow_back_date');
+            $table->string('borrow_fine');
             $table->timestamps();
         });
     }

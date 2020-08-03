@@ -17,13 +17,13 @@
       <tr>
         <td>Penerbit</td>
         <td>:</td>
-        <td><input type="number" name="publisher_id" value="{{$book -> publisher_id}}"></td>
+        <td><input type="number" name="book_publisher_id" value="{{$book -> book_publisher_id}}"></td>
       </tr>
 
       <tr>
         <td>Jumlah Halaman</td>
         <td>:</td>
-        <td><input type="number" name="page_total" value="{{$book -> page_total}}"></td>
+        <td><input type="number" name="book_page_total" value="{{$book -> book_page_total}}"></td>
       </tr>
 
       <tr>

@@ -23,8 +23,8 @@
     	<tr>
     		<td>{{$count+1}}</td>
     		<td>{{$book->book_title}}</td>
-        <td>{{$book->publisher_id}}</td>
-        <td>{{$book->page_total}}</td>
+        <td>{{$book->book_publisher_id}}</td>
+        <td>{{$book->book_page_total}}</td>
         <td>{{$book->book_total}}</td>
     		<td>{{$book->book_category}}</td>
     		<td>    			
