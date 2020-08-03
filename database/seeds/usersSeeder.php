@@ -12,7 +12,6 @@ class usersSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            //'user_id' => Int::random(10),
             'email' 		    => 'admin@gmail.com',
             'password' 	        => Hash::make('admin'),
             'user_nis' 			=> '181910',
@@ -24,7 +23,6 @@ class usersSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            //'user_id' => Int::random(10),
             'email' 		    => 'rendy@gmail.com',
             'password' 	        => Hash::make('rendy'),
             'user_nis' 			=> '191810065',
@@ -36,7 +34,6 @@ class usersSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            //'user_id' => Int::random(10),
             'email' 		    => 'hania@gmail.com',
             'password' 	        => Hash::make('hania'),
             'user_nis' 			=> '181910044',
@@ -48,7 +45,6 @@ class usersSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            //'user_id' => Int::random(10),
             'email' 		    => 'desmarita@gmail.com',
             'password'      	=> Hash::make('desmarita'),
             'user_nis' 			=> '181910022',
@@ -60,7 +56,6 @@ class usersSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            //'user_id' => Int::random(10),
             'email' 		    => 'roby@gmail.com',
             'password' 	        => Hash::make('roby'),
             'user_nis' 			=> '181910070',
@@ -73,7 +68,6 @@ class usersSeeder extends Seeder
 
 		
         DB::table('users')->insert([
-            //'user_id' => Int::random(10),
             'email' 		    => 'christian@gmail.com',
             'password'      	=> Hash::make('christian'),
             'user_nis' 			=> '181910021',
