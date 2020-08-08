@@ -28,11 +28,10 @@ Route::post('/books', 'admin\BooksController@save_books'); // Untuk mengirimkan 
 Route::delete('/books/{book_id}', 'admin\BooksController@destroy'); // Untuk menghapus data buku yang ada sesuai book_id yang sudah dipilih
 Route::get('/edit-books/{book_id}/edit', 'admin\BooksController@edit_books'); // Untuk menampilkan form Edit buku yang ada sesuai book_id yang sudah dipilih
 Route::post('/update-books/{book_id}', 'admin\BooksController@update_books'); // Untuk mengirimkan data buku yang sudah di update atau diubah ke database sesuai book_id yang sudah dipilih
-Route::get('/list-book', 'admin\BooksController@list_book'); // Untuk menampilkan halaman daftar buku (book)
+Route::get('/list-book', 'admin\BooksController@list_book'); // Untuk menampilkan halaman daftar buku (book) dalam bentuk card
 
 
-
-//Line 34 sampai 39 route  untuk publisher
+//Line 35 sampai 40 route  untuk publisher
 Route::get('/publishers', 'admin\PublishersController@index'); //Untuk menampilkan halaman daftar penerbit (publisher)
 Route::get('/add-publishers', 'admin\PublishersController@add_publishers');// Untuk menampilkan form tambah penerbit
 Route::post('/publishers', 'admin\PublishersController@save_publishers');// Untuk mengirimkan data penerbit yang sudah ditambah ke database
@@ -41,7 +40,7 @@ Route::get('/edit-publishers/{publisher_id}/edit', 'admin\PublishersController@e
 Route::post('/update-publishers/{publisher_id}', 'admin\PublishersController@update_publishers');// Untuk mengirimkan data penerbit yang sudah di update atau diubah ke database sesuai publisher_id yang sudah dipilih
 
 
-//Line 43 sampai 48 route untuk user
+//Line 44 sampai 49 route untuk user
 Route::get('/users', 'admin\UsersController@index');//Untuk menampilkan halaman daftar pengguna (user)
 Route::get('/add-users', 'admin\UsersController@add_users');// Untuk menampilkan form tambah pengguna
 Route::post('/users', 'admin\UsersController@save_users');// Untuk mengirimkan data pengguna yang sudah ditambah ke database
