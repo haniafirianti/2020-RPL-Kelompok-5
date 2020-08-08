@@ -13,12 +13,12 @@
           <form action="/update-users/{{$user->user_id}}" method="POST">
             <div class="form-group">
               <label for="exampleInputEmail111">EMAIL</label>
-              <input type="text" name="email" class="form-control" value="{{$user -> email}}">
+              <input type="text" name="user_email" class="form-control" value="{{$user -> user_email}}">
             </div>
 
             <div class="form-group">
               <label for="exampleInputEmail111">PASSWORD</label>
-              <input type="text" name="password" class="form-control" value="{{$user -> password}}">
+              <input type="text" name="user_password" class="form-control" value="{{$user -> user_password}}">
             </div>
 
             <div class="form-group">

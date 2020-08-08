@@ -11,10 +11,10 @@ class usersSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'email' 		    => 'admin@gmail.com',
-            'password' 	        => Hash::make('admin'),
+            'user_email' 	    => 'admin@gmail.com',
+            'user_password'     => Hash::make('admin'),
             'user_nis' 			=> '181910',
-            'user_full_name' 		=> 'admin',
+            'user_full_name' 	=> 'admin',
             'user_class' 		=> 'XII RPL',
             'user_phone_number' => '081337466222',
             'user_address' 		=> 'Kp.Sukamukti',
@@ -22,10 +22,10 @@ class usersSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'email' 		    => 'rendy@gmail.com',
-            'password' 	        => Hash::make('rendy'),
+            'user_email' 	    => 'rendy@gmail.com',
+            'user_password'     => Hash::make('rendy'),
             'user_nis' 			=> '191810065',
-            'user_full_name' 		=> 'jhrendy',
+            'user_full_name' 	=> 'jhrendy',
             'user_class' 		=> 'XII RPL1',
             'user_phone_number' => '6281337366222',
             'user_address' 		=> 'Kp.Bojong Tanjung',
@@ -33,10 +33,10 @@ class usersSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'email' 		    => 'hania@gmail.com',
-            'password' 	        => Hash::make('hania'),
+            'user_email' 	    => 'hania@gmail.com',
+            'user_password'     => Hash::make('hania'),
             'user_nis' 			=> '181910044',
-            'user_full_name' 		=> 'hania',
+            'user_full_name' 	=> 'hania',
             'user_class' 		=> 'XII RPL1',
             'user_phone_number' => '6281337266222',
             'user_address' 		=> 'Kp.Cupu',
@@ -44,8 +44,8 @@ class usersSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'email' 		    => 'desmarita@gmail.com',
-            'password'      	=> Hash::make('desmarita'),
+            'user_email' 	    => 'desmarita@gmail.com',
+            'user_password'    	=> Hash::make('desmarita'),
             'user_nis' 			=> '181910022',
             'user_full_name' 		=> 'desmarita',
             'user_class' 		=> 'XII RPL1',
@@ -55,8 +55,8 @@ class usersSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'email' 		    => 'roby@gmail.com',
-            'password' 	        => Hash::make('roby'),
+            'user_email' 	    => 'roby@gmail.com',
+            'user_password'     => Hash::make('roby'),
             'user_nis' 			=> '181910070',
             'user_full_name' 		=> 'roby',
             'user_class' 		=> 'XII RPL1',
@@ -67,8 +67,8 @@ class usersSeeder extends Seeder
 
 		
         DB::table('users')->insert([
-            'email' 		    => 'christian@gmail.com',
-            'password'      	=> Hash::make('christian'),
+            'user_email'	    => 'christian@gmail.com',
+            'user_password'    	=> Hash::make('christian'),
             'user_nis' 			=> '181910021',
             'user_full_name' 		=> 'christian',
             'user_class' 		=> 'XII RPL1',

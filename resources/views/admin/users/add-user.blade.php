@@ -13,12 +13,12 @@
 					<form action="/users" method="POST">
 						<div class="form-group">
 							<label for="exampleInputEmail111">EMAIL</label>
-							<input type="text" name="email" class="form-control">
+							<input type="text" name="user_email" class="form-control">
 						</div>
 
 						<div class="form-group">
 							<label for="exampleInputEmail111">PASSWORD</label>
-							<input type="text" name="password" class="form-control">
+							<input type="text" name="user_password" class="form-control">
 						</div>
 
 						<div class="form-group">

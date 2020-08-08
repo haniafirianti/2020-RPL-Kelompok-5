@@ -20,7 +20,7 @@
                             <span>Pro User</span>
                         </div>
                     </li>
-                    <li><a href="/list-book"><i class="icon_lifesaver"></i> <span>Dashboard</span></a></li>
+                    <li><a href="/list-book"><i class="icon_lifesaver"></i> <span>Daftar Buku </span></a></li>
                     <li><a href="/books"><i class="icon_cog"></i> <span>Book Management</span></a></li>
                     <li><a href="/publishers"><i class="icon_cog"></i> <span>Publisher Management</span></a></li>
                     <li><a href="/users"><i class="icon_cog"></i> <span>User Management</span></a></li>
