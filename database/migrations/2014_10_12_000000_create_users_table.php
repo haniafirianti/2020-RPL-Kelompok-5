@@ -17,12 +17,12 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('user_id');
             $table->string('email')->unique();
             $table->string('password');
-            $table->biginteger('user_nis');
+            $table->string('user_nis');
             $table->string('user_full_name');
             $table->string('user_class');
-            $table->biginteger('user_phone_number');
+            $table->string('user_phone_number');
             $table->string('user_address');
-            $table->biginteger('user_level');
+            $table->biginteger('user_level')->null();
             $table->timestamps();
         });
     }
