@@ -38,7 +38,7 @@
                   <tr role="row">
                     <th class="sorting_asc" aria-controls="datatable-buttons" aria-sort="ascending" aria-label="Name: activate to sort column descending">No</th>
                     <th class="sorting" aria-controls="datatable-buttons" aria-label="Position: activate to sort column ascending">Nama Buku</th>
-                    <th class="sorting" aria-controls="datatable-buttons" aria-label="Office: activate to sort column ascending">Nama Peminjamt</th>
+                    <th class="sorting" aria-controls="datatable-buttons" aria-label="Office: activate to sort column ascending">Nama Peminjam</th>
                     <th class="sorting" aria-controls="datatable-buttons" aria-label="Office: activate to sort column ascending">Tanggal Pinjam</th>
                     <th class="sorting" aria-controls="datatable-buttons" aria-label="Office: activate to sort column ascending">Tanggal Kembali</th>
                     <th class="sorting" aria-controls="datatable-buttons" aria-label="Office: activate to sort column ascending">Jumlah Denda</th>

@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="card card-body">
-                <h4 class="card-title">Form Edit Penerbit</h4>
+                <h4 class="card-title">Form Tambah Penerbit</h4>
                 <div class="row">
                     <div class="col-sm-12 col-xs-12">
                         <form action="/publishers" method="POST">
