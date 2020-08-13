@@ -20,11 +20,11 @@
                             <span>Pro User</span>
                         </div>
                     </li>
-                    <li><a href="/list-book"><i class="icon_lifesaver"></i> <span>Daftar Buku </span></a></li>
-                    <li><a href="/books"><i class="icon_cog"></i> <span>Book Management</span></a></li>
-                    <li><a href="/publishers"><i class="icon_cog"></i> <span>Publisher Management</span></a></li>
-                    <li><a href="/users"><i class="icon_cog"></i> <span>User Management</span></a></li>
-                    <li><a href="/borrows"><i class="icon_cog"></i> <span>Borrow Management</span></a></li>
+                    <li class="{{Request::is('home')?'active':''}}"><a href="/list-book"><i class="icon_lifesaver"></i> <span>Daftar Buku </span></a></li>
+                    <li class="{{Request::is('books')?'active':''}}"><a href="/books"><i class="icon_cog"></i> <span>Book Management</span></a></li>
+                    <li class="{{Request::is('publishers')?'active':''}}"><a href="/publishers"><i class="icon_cog"></i> <span>Publisher Management</span></a></li>
+                    <li class="{{Request::is('users')?'active':''}}"><a href="/users"><i class="icon_cog"></i> <span>User Management</span></a></li>
+                    <li class="{{Request::is('borrows')?'active':''}}"><a href="/borrows"><i class="icon_cog"></i> <span>Borrow Management</span></a></li>
 
                     <li class="treeview">
                         <a href="javascript:void(0)"><i class="icon_laptop"></i> <span>Apps</span> <i class="fa fa-angle-right"></i></a>

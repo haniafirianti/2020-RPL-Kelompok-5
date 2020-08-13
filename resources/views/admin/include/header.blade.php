@@ -63,7 +63,7 @@
         </ul>
     </div>
 </header>
-
+<!-- 
 <div class="row">
     <div class="col-12">
         <div class="dahboard-header-area d-sm-flex align-items-center justify-content-between">
@@ -71,8 +71,7 @@
                 <h6 class="mb-0 mr-3">Dashboard</h6>
                 <p class="mb-0 mr-3 font-13">#6598452</p>
                 <div class="nav-item dropdown">
-                    <button class="btn btn-primary dropdown-toggle font-12" type="button" id="dropdownMenuButton6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add new</button>
-                    <!-- Dropdown Menu -->
+                    <button class="btn btn-primary dropdown-toggle font-12" type="button" id="dropdownMenuButton6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add new</button 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6">
                         <a href="#" class="dropdown-item">- Profile</a>
                         <a href="#" class="dropdown-item">- Messages</a>
@@ -91,4 +90,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

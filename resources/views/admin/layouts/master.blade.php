@@ -17,7 +17,7 @@
         <div class="ecaps-page-content">
             @include ('admin.include.header')
 
-                <div class="main-content dashboard-pt">
+                <div class="main-content dashboard-pt" style="padding-top:1%;">
                 <div class="container-fluid">
                 @yield('content')
 
