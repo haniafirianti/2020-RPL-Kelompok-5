@@ -20,7 +20,13 @@ class Books extends Model
     	return Books::update($data);
     }
 
+    public function publisher()
+    {
+        return $this->belongsTo('App\Models\Publishers', 'book_publisher_id', 'publisher_id');
+    }
+    
 
 
 
 }
+

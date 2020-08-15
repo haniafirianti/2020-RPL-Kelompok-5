@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Books;
 
 class Publishers extends Model
 {
@@ -20,5 +21,13 @@ class Publishers extends Model
     {
     	return Publishers::update($data);
     }
+
+    public function book()
+    {
+        return $this->hasMany(Book::class);
+    }
+
+    
+
 
 }

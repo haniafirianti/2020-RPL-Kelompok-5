@@ -16,14 +16,11 @@
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <div class="dt-buttons btn-group"> 
-                  <a href="/add-publishers" class="btn btn-success"><span>Tambah penerbit</span></a>
-                
-
-                <button class="btn btn-warning buttons-print" tabindex="0" aria-controls="datatable-buttons" type="button">
-                  <span>Print</span>
-                </button> 
+                  <a href="/add-publishers" class="btn btn-outline-success btn-lg fa fa-plus"></a>
               </div>
-
+              <div class="dt-buttons btn-group"> 
+                <button class="btn btn-outline-warning btn-lg buttons-print fa fa-print" tabindex="0" aria-controls="datatable-buttons" type="button">
+                </button> 
             </div>
 
             <div class="col-sm-12 col-md-6">
@@ -51,8 +48,8 @@
                     <td>{{$publisher->publisher_address}}</td> 
                     <td>
                       <form action="/publishers/{{$publisher->publisher_id}}" method="post">
-                        <a href="edit-publishers/{{$publisher->publisher_id}}/edit" value="EDIT" class="btn btn-success" >Edit</a>
-                        <input type="submit" name="submit" value="DELETE" class="btn btn-danger">
+                        <a href="edit-publishers/{{$publisher->publisher_id}}/edit" value="EDIT" class="btn btn-outline-info fa fa-pencil-square-o"></a>
+                        <button type="submit" name="submit" class="btn btn-outline-danger fa fa-trash-o"></button>
                         {{csrf_field()}}
                         <input type="hidden" name="_method" value="DELETE">
                       </form>

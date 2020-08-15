@@ -18,8 +18,7 @@
               <div class="dt-buttons btn-group"> 
                   
 
-                <button class="btn btn-warning buttons-print" tabindex="0" aria-controls="datatable-buttons" type="button">
-                  <span>Print</span>
+                <button class="btn btn-outline-warning btn-lg buttons-print fa fa-print" tabindex="0" aria-controls="datatable-buttons" type="button">
                 </button> 
               </div>
 

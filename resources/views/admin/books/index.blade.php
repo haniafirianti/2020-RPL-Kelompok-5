@@ -15,12 +15,10 @@
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <div class="dt-buttons btn-group"> 
-                
-                
-                <a href="/add-books" class="btn btn-success"><span>Tambah buku</span></a>
-
-                <button class="btn btn-secondary buttons-print" tabindex="0" aria-controls="datatable-buttons" type="button">
-                  <span>Print</span>
+                <a href="/add-books" class="btn btn-outline-success btn-lg fa fa-plus"></a>
+              </div>
+              <div class="dt-buttons btn-group">
+                <button class="btn btn-outline-warning btn-lg buttons-print fa fa-print" tabindex="0" aria-controls="datatable-buttons" type="button">
                 </button> 
               </div>
 
@@ -51,14 +49,14 @@
                   <tr>
                     <td>{{$count+1}}</td>
                     <td>{{$book->book_title}}</td>
-                    <td>{{$book->book_publisher_id}}</td> 
+                    <td>{{$book->publisher->publisher_name}}</td> 
                     <td>{{$book->book_page_total}}</td> 
                     <td>{{$book->book_total}}</td> 
                     <td>{{$book->book_category}}</td> 
                     <td>
                       <form action="/books/{{$book->book_id}}" method="post">
-                        <a href="edit-books/{{$book->book_id}}/edit" class="btn btn-success" >Edit Buku</a>
-                        <input type="submit" name="submit" value="DELETE" class="btn btn-secondary">
+                        <a href="edit-books/{{$book->book_id}}/edit" class="btn btn-outline-info fa fa-pencil-square-o" ></a>
+                        <button type="submit" name="submit" class="btn btn-outline-danger fa fa-trash-o"></button>
                         {{csrf_field()}}
                         <input type="hidden" name="_method" value="DELETE">
                       </form>
