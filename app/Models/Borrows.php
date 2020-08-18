@@ -10,4 +10,5 @@ class Borrows extends Model
     protected $primaryKey = 'borrow_id';
     protected $guarded	= [];
 
+
 }

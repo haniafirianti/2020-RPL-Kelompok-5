@@ -19,4 +19,9 @@ class Users extends Model
     {
     	return Users::update($data);
     }
+
+    public function books()
+    {
+        return $this->belongsToMany('App\Models\Books');
+    }
 }

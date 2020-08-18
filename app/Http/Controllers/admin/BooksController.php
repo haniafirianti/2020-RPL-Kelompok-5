@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Books;
+use App\Models\Publishers;
 
 class BooksController extends Controller
 {
@@ -14,10 +15,19 @@ class BooksController extends Controller
     }
 
     public function add_books(){
-    	return view('admin/books/add-book');
+        $publisher = Publishers::all();
+    	return view('admin/books/add-book', ['publisher' => $publisher]);
     }
 
     public function save_books(Request $request){
+        $this->validate($request, [
+            'book_title'    => 'required|min:3',
+            'book_publisher_id'   => 'required',
+            'book_page_total'   => 'required',
+            'book_total'   => 'required',
+            'book_category'   => 'required',
+            ]);
+        
     	$book = new Books;
     	$book->save_books($request->all());
     	return redirect('/books');
@@ -26,7 +36,8 @@ class BooksController extends Controller
 
     public function edit_books($book_id){
     	$book=Books::find($book_id);
-    	return view('admin/books/edit-book', ['book' => $book]);
+        $publisher = Publishers::all();
+    	return view('admin/books/edit-book', ['book' => $book, 'publisher' => $publisher]);
     }
 
     public function update_books(Request $request, $book_id){

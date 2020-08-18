@@ -17,6 +17,7 @@ class CreateBorrowsTable extends Migration
             $table->bigIncrements('borrow_id');
             $table->biginteger('borrow_book_id');
             $table->biginteger('borrow_user_id');
+            $table->biginteger('borrow_total_books');
             $table->date('borrow_date');
             $table->date('borrow_back_date');
             $table->string('borrow_fine');
