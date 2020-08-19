@@ -21,11 +21,11 @@ class BooksController extends Controller
 
     public function save_books(Request $request){
         $this->validate($request, [
-            'book_title'    => 'required|min:3',
-            'book_publisher_id'   => 'required',
-            'book_page_total'   => 'required',
-            'book_total'   => 'required',
-            'book_category'   => 'required',
+            'book_title'            => 'required|min:3',
+            'book_publisher_id'     => 'required',
+            'book_page_total'       => 'required',
+            'book_total'            => 'required',
+            'book_category'         => 'required',
             ]);
         
     	$book = new Books;

@@ -19,6 +19,11 @@ class PublishersController extends Controller
     }
 
     public function save_publishers(Request $request){
+        $this->validate($request, [
+            'publisher_name'    => 'required',
+            'publisher_address' => 'required',
+            ]);
+        
     	$publisher = new Publishers;
     	$publisher->save_publishers($request->all());
     	return redirect('/publishers');

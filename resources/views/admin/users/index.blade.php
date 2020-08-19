@@ -17,8 +17,9 @@
             <div class="col-sm-12 col-md-6">
               <div class="dt-buttons btn-group"> 
                   <a href="/add-users" class="btn btn-outline-success btn-lg fa fa-plus"></a>
+              </div>
                 
-
+              <div class="dt-buttons btn-group"> 
                 <button class="btn btn-outline-warning btn-lg buttons-print fa fa-print" tabindex="0" aria-controls="datatable-buttons" type="button">
                 </button> 
               </div>
