@@ -49,5 +49,16 @@ Route::delete('/users/{user_id}', 'admin\UsersController@destroy');// Untuk meng
 Route::get('/edit-users/{user_id}/edit', 'admin\UsersController@edit_users');// Untuk menampilkan form Edit pengguna yang ada sesuai user_id yang sudah dipilih
 Route::post('/update-users/{user_id}', 'admin\UsersController@update_users');// Untuk mengirimkan data pengguna yang sudah di update atau diubah ke database sesuai user_id yang sudah dipilih
 
-//Line 53 route untuk borrow
+
+//Line 54 sampai 59 route untuk student
+Route::get('/students', 'admin\StudentsController@index');//Untuk menampilkan halaman daftar pengguna (Student)
+Route::get('/add-students', 'admin\StudentsController@add_students');// Untuk menampilkan form tambah pengguna
+Route::post('/students', 'admin\StudentsController@save_students');// Untuk mengirimkan data pengguna yang sudah ditambah ke database
+Route::delete('/students/{student_id}', 'admin\StudentsController@destroy');// Untuk menghapus data pengguna yang ada sesuai student_id yang sudah dipilih
+Route::get('/edit-students/{student_id}/edit', 'admin\StudentsController@edit_students');// Untuk menampilkan form Edit pengguna yang ada sesuai student_id yang sudah dipilih
+Route::post('/update-students/{student_id}', 'admin\StudentsController@update_students');// Untuk mengirimkan data pengguna yang sudah di update atau diubah ke database sesuai student_id yang sudah dipilih
+
+//Line 62 route untuk borrow
 Route::get('/borrows', 'admin\BorrowsController@index');//Untuk menampilkan halaman daftar peminjaman (borrow)
+Route::get('/add-borrow', 'admin\BorrowsController@add_borrow'); // Untuk menampilkan form tambah peminjaman
+Route::post('/borrows', 'admin\BorrowsController@save_borrow'); // Untuk mengirimkan data peminjaman yang sudah ditambah ke database

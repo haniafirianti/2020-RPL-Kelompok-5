@@ -24,6 +24,7 @@
                     <li class="{{Request::is('books')?'active':''}}"><a href="/books"><i class="fa fa-book"></i> <span>Kelola Buku</span></a></li>
                     <li class="{{Request::is('publishers')?'active':''}}"><a href="/publishers"><i class="fa fa-pencil"></i> <span>Kelola Penerbit</span></a></li>
                     <li class="{{Request::is('users')?'active':''}}"><a href="/users"><i class="zmdi zmdi-account-calendar"></i> <span>Kelola User</span></a></li>
+                    <li class="{{Request::is('students')?'active':''}}"><a href="/students"><i class="zmdi zmdi-account-calendar"></i> <span>Kelola Student</span></a></li>
                     <li class="{{Request::is('borrows')?'active':''}}"><a href="/borrows"><i class="fa fa-bookmark-o"></i> <span>Kelola Peminjaman</span></a></li>
 
                     <li class="treeview">

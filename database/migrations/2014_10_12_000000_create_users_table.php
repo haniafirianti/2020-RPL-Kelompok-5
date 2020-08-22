@@ -17,12 +17,6 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('user_id');
             $table->string('user_email')->unique();
             $table->string('user_password');
-            $table->string('user_nis')->unique();
-            $table->string('user_full_name');
-            $table->string('user_class');
-            $table->string('user_phone_number');
-            $table->string('user_address');
-            $table->biginteger('user_level')->null();
             $table->timestamps();
         });
     }

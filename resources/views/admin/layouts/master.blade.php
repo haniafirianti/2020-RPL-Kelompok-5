@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Perpustakaan @stack('tittle')</title>
+    <title>Perpustakaan @stack('title')</title>
     @include ('admin.include.head')
 </head>
 
@@ -27,5 +27,8 @@
     </div>
 
    @include ('admin.include.js')
+   @section ('js')
+
+   @show
 
 </html>

@@ -16,12 +16,12 @@
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <div class="dt-buttons btn-group"> 
-
-
+                <div class="dt-buttons btn-group"> 
+                  <a href="/add-borrow" class="btn btn-outline-success btn-lg fa fa-plus"></a>
+                </div>
                 <button class="btn btn-outline-warning btn-lg buttons-print fa fa-print" tabindex="0" aria-controls="datatable-buttons" type="button">
                 </button> 
               </div>
-
             </div>
 
             <div class="col-sm-12 col-md-6">
@@ -48,15 +48,15 @@
 
                 <tbody>
                   @foreach($borrow as $count=> $borrow)
-                  @foreach($borrow->users as $user)
+                  @foreach($borrow->students as $student)
                   <tr>
                     <td>{{$count+1}}</td>
                     <td>{{$borrow->book_title}}</td>
-                    <td>{{$user->user_full_name}}</td> 
-                    <td>{{$user->pivot->borrow_total_books}}</td>
-                    <td>{{$user->pivot->borrow_date}}</td>
-                    <td>{{$user->pivot->borrow_back_date}}</td>
-                    <td>{{$user->pivot->borrow_fine}}</td>
+                    <td>{{$student->student_full_name}}</td> 
+                    <td>{{$student->pivot->borrow_total_books}}</td>
+                    <td>{{$student->pivot->borrow_date}}</td>
+                    <td>{{$student->pivot->borrow_expectation_back_date}}</td>
+                    <td>{{$student->pivot->borrow_fine}}</td>
                     <td>
                       <a href="#" class="btn btn-info btn-sm">Kembalikan</a>
                       <a href="#" class="btn btn-danger btn-sm">Bayar Denda</a>

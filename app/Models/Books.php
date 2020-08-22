@@ -25,9 +25,9 @@ class Books extends Model
         return $this->belongsTo('App\Models\Publishers', 'book_publisher_id', 'publisher_id');
     }
 
-    public function users()
+    public function students()
     {
-        return $this->belongsToMany('App\Models\Users', 'borrows', 'borrow_book_id', 'borrow_user_id')->withPivot('borrow_date', 'borrow_back_date', 'borrow_fine', 'borrow_total_books');
+        return $this->belongsToMany('App\Models\students', 'borrows', 'borrow_book_id', 'borrow_student_id')->withPivot('borrow_date', 'borrow_expectation_back_date', 'borrow_back_date', 'borrow_fine', 'borrow_total_books');
     }
     
 
