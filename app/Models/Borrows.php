@@ -15,6 +15,9 @@ class Borrows extends Model
     {
     	$data['borrow_user_id'] = Auth::user()->user_id;
     	$data['borrow_fine'] = '0';
+    	unset($data['student_full_name']);
+    	unset($data['book_title']);
+
     	return Borrows::create($data);
     }
 

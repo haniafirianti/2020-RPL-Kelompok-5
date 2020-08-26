@@ -5,7 +5,6 @@
 @endpush
 
 @section('content')
-
 <div class="row">
   <div class="col-12">
     <div class="card">
@@ -16,11 +15,13 @@
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <div class="dt-buttons btn-group"> 
-                  <a href="/add-publishers" class="btn btn-outline-success btn-lg fa fa-plus"></a>
+                <a href="/add-publishers" class="btn btn-outline-success btn-lg fa fa-plus"></a>
               </div>
-              <div class="dt-buttons btn-group"> 
+              <div class="dt-buttons btn-group">
                 <button class="btn btn-outline-warning btn-lg buttons-print fa fa-print" tabindex="0" aria-controls="datatable-buttons" type="button">
                 </button> 
+              </div>
+
             </div>
 
             <div class="col-sm-12 col-md-6">
@@ -70,5 +71,6 @@
       </div> <!-- end card body-->
     </div> <!-- end card -->
   </div><!-- end col-->
+</div>
 </div>
 @endsection

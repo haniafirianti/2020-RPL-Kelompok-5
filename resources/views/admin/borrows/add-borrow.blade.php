@@ -35,13 +35,13 @@
                         <div class="form-group">
                             <label for="student_id">Siswa</label>
                             <div class="input-group">
-                            <input id="student_full_name" type="text" name="borrow_student_id" class="form-control @error('borrow_student_id') is-invalid @enderror">
-                            <input id="student_id" type="hidden" name="borrow_student_id" value="{{ old('borrow_student_id') }}" required readonly="">
+                            <input id="student_full_name" type="text" name="student_full_name" value="{{ old('student_full_name') }}" required readonly="" class="form-control @error('student_full_name') is-invalid @enderror">
+                            <input id="student_id" type="hidden" name="borrow_student_id">
                             <span class="input-group-btn">
                                 <button type="button" class="btn btn-info btn-secondary" data-toggle="modal" data-target="#myModal2"><b>Cari Siswa</b> <span class="fa fa-search"></span></button>
                             </span>
                             </div>
-                            @error('borrow_student_id')
+                            @error('student_full_name')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -51,13 +51,13 @@
                         <div class="form-group">
                             <label for="book_id">Buku</label>
                             <div class="input-group">
-                            <input id="book_title" type="text" name="borrow_book_id" class="form-control @error('borrow_book_id') is-invalid @enderror">
-                            <input id="book_id" type="hidden" name="borrow_book_id" value="{{ old('borrow_book_id') }}" required readonly="">
+                            <input id="book_title" type="text" name="book_title"  value="{{ old('book_title') }}" required readonly class="form-control @error('book_title') is-invalid @enderror">
+                            <input id="book_id" type="hidden" name="borrow_book_id">
                             <span class="input-group-btn">
                                 <button type="button" class="btn btn-info btn-secondary" data-toggle="modal" data-target="#myModal"><b>Cari Buku</b> <span class="fa fa-search"></span></button>
                             </span>
                             </div>
-                            @error('borrow_book_id')
+                            @error('book_title')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -72,11 +72,17 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                             @enderror
+
+                            @if (session('status'))
+                                 <div class="alert alert-danger">
+                                    {{ session('status') }}
+                                 </div>
+                            @endif
                         </div>
 
                         <div class="form-group">
                             <label for="exampleInputEmail111">Tanggal Pinjam</label>
-                            <input type="date" class="form-control @error('borrow_date') is-invalid @enderror" value="{{ old('borrow_date') }}" name="borrow_date" value="{{ date('Y-m-d', strtotime(Carbon\Carbon::today()->toDateString())) }}" required>
+                            <input type="date" class="form-control @error('borrow_date') is-invalid @enderror" name="borrow_date" value="{{ date('Y-m-d', strtotime(Carbon\Carbon::today()->toDateString())) }}" required>
                             @error('borrow_date')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -86,7 +92,7 @@
 
                         <div class="form-group">
                             <label for="exampleInputEmail111">Tanggal Kembali</label>
-                            <input type="date" class="form-control @error('borrow_expectation_back_date') is-invalid @enderror" value="{{ old('borrow_expectation_back_date') }}" name="borrow_expectation_back_date" value="{{ date('Y-m-d', strtotime(Carbon\Carbon::today()->toDateString())) }}" required>
+                            <input type="date" class="form-control @error('borrow_expectation_back_date') is-invalid @enderror"name="borrow_expectation_back_date" value="{{ date('Y-m-d', strtotime(Carbon\Carbon::today()->addDays(7)->toDateString())) }}" required>
                             @error('borrow_expectation_back_date')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -115,7 +121,7 @@
         </button>
       </div>
       <div class="modal-body">
-                        <table id="lookup" class="table table-striped dt-responsive nowrap w-100 dataTable no-footer dtr-inline" role="grid" aria-describedby="datatable-buttons_info" style="width: 1049px;">
+            <table id="lookup" class="table table-striped dt-responsive nowrap w-100 dataTable no-footer dtr-inline" role="grid" aria-describedby="datatable-buttons_info" style="width: 1049px;">
 
                 <thead>
                   <tr role="row">
@@ -182,7 +188,7 @@
                     <td>{{$student->student_address}}</td>
                     @endforeach    
                   </tbody>
-                </table>
+            </table>
                     </div>
                 </div>
             </div>

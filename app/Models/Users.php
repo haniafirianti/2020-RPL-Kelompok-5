@@ -12,7 +12,7 @@ class Users extends Model
 
     public function save_users($data)
     {
-    	return Users::create($data, $data['user_level'] = '1');
+    	return Users::create($data);
     }
 
     public function update_users($data)

@@ -50,7 +50,7 @@ class BooksController extends Controller
     {
         $book = Books::find($book_id);
         $book->delete();
-        return redirect('/books/');
+        return redirect('/books');
     }
 
     public function list_book()

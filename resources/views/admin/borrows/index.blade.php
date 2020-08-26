@@ -47,10 +47,10 @@
                 </thead>
 
                 <tbody>
-                  @foreach($borrow as $count=> $borrow)
+                  @foreach($borrow as $borrow)
                   @foreach($borrow->students as $student)
                   <tr>
-                    <td>{{$count+1}}</td>
+                    <td>{{++$count}}</td>
                     <td>{{$borrow->book_title}}</td>
                     <td>{{$student->student_full_name}}</td> 
                     <td>{{$student->pivot->borrow_total_books}}</td>

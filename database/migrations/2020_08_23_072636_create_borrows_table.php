@@ -15,9 +15,12 @@ class CreateBorrowsTable extends Migration
     {
         Schema::create('borrows', function (Blueprint $table) {
             $table->bigIncrements('borrow_id');
-            $table->biginteger('borrow_book_id');
-            $table->biginteger('borrow_user_id');
-            $table->biginteger('borrow_student_id');
+            $table->unsignedBiginteger('borrow_book_id');
+            $table->unsignedBiginteger('borrow_user_id');
+            $table->unsignedBiginteger('borrow_student_id');
+            $table->foreign('borrow_book_id')->references('book_id')->on('books');
+            $table->foreign('borrow_user_id')->references('user_id')->on('users');
+            $table->foreign('borrow_student_id')->references('student_id')->on('students');
             $table->biginteger('borrow_total_books');
             $table->date('borrow_date');
             $table->date('borrow_expectation_back_date');

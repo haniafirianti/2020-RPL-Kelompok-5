@@ -22,11 +22,6 @@ class UsersController extends Controller
         $this->validate($request, [
             'user_email'        => 'required',
             'user_password'     => 'required|min:8',
-            'user_nis'          => 'required',
-            'user_full_name'    => 'required',
-            'user_class'        => 'required',
-            'user_phone_number' => 'required',
-            'user_address'      => 'required',
             ]);
     	$user = new Users;
     	$user->save_users($request->all());
