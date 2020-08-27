@@ -16,11 +16,12 @@ Route::get('/', function () {
     return view('welcome');
 }); 
 
-Auth::routes(); // Kode Untuk Autentifikasi seperti, Login, Registrasi, Logout
+Auth::routes(['register'=>false]); // Kode Untuk Autentifikasi seperti, Login, Registrasi, Logout
 
 
 Route::get('/home', 'HomeController@index'); // Untuk menampilkan halaman home
 
+Route::group(['middleware' => 'auth'], function () {
 
 //Line 26 sampai line 32 route untuk book
 Route::get('/books', 'admin\BooksController@index'); // Untuk menampilkan halaman daftar buku (book)
@@ -63,3 +64,5 @@ Route::get('/borrows', 'admin\BorrowsController@index');//Untuk menampilkan hala
 Route::get('/add-borrow', 'admin\BorrowsController@add_borrow'); // Untuk menampilkan form tambah peminjaman
 Route::post('/borrows', 'admin\BorrowsController@save_borrow'); // Untuk mengirimkan data peminjaman yang sudah ditambah ke database
 Route::post('/return/{borrow_id}', 'admin\BorrowsController@return'); // Untuk mengirimkan data buku yang sudah di update atau diubah ke database sesuai book_id yang sudah dipilih
+
+});

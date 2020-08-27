@@ -22,6 +22,16 @@
 						</div>
 
 						<div class="form-group">
+							<label for="exampleInputEmail111">NAMA LENGKAP</label>
+							<input type="text" name="user_full_name" class="form-control @error('user_full_name') is-invalid @enderror" value="{{ old('user_full_name') }}">
+							@error('user_full_name')
+							<span class="invalid-feedback" role="alert">
+								<strong>{{ $message }}</strong>
+							</span>
+							@enderror
+						</div>
+
+						<div class="form-group">
 							<label for="exampleInputEmail111">PASSWORD</label>
 							<input type="text" name="user_password" class="form-control @error('user_password') is-invalid @enderror" value="{{ old('user_password') }}">
 							@error('user_password')
