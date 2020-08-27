@@ -17,9 +17,7 @@
 
         <!-- Left Side Nav -->
         <ul class="left-side-navbar d-flex align-items-center">
-            <li class="hide-phone app-search mr-15">
-                <form role="search" class=""><input type="text" placeholder="Search..." class="form-control"> <button type="submit" class="mr-0"><i class="fa fa-search"></i></button></form>
-            </li>
+            <li class="hide-phone app-search mr-15"></li>
         </ul>
     </div>
 
