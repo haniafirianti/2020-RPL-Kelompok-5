@@ -92,7 +92,7 @@
 
                         <div class="form-group">
                             <label for="exampleInputEmail111">Tanggal Kembali</label>
-                            <input type="date" class="form-control @error('borrow_expectation_back_date') is-invalid @enderror"name="borrow_expectation_back_date" value="{{ date('Y-m-d', strtotime(Carbon\Carbon::today()->addDays(7)->toDateString())) }}" required>
+                            <input type="date" class="form-control @error('borrow_expectation_back_date') is-invalid @enderror" name="borrow_expectation_back_date" value="{{ date('Y-m-d', strtotime(Carbon\Carbon::today()->addDays(7)->toDateString())) }}" required>
                             @error('borrow_expectation_back_date')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>

@@ -19,7 +19,6 @@ class borrowsSeeder extends Seeder
             'borrow_total_books'                => '25',
             'borrow_date' 	                    => '2020-08-04',
             'borrow_expectation_back_date' 	    => '2020-08-11',
-            'borrow_fine' 			            => '',
             ]);
 
         DB::table('borrows')->insert([
@@ -30,7 +29,6 @@ class borrowsSeeder extends Seeder
             'borrow_total_books'                => '28',
             'borrow_date' 	                    => '2020-08-04',
             'borrow_expectation_back_date' 	    => '2020-08-11',
-            'borrow_fine' 			            => '',
             ]);
 
         DB::table('borrows')->insert([
@@ -52,7 +50,6 @@ class borrowsSeeder extends Seeder
             'borrow_total_books'                => '35',
             'borrow_date' 	                    => '2020-08-04',
             'borrow_expectation_back_date' 	    => '2020-08-11',
-            'borrow_fine' 			            => '',
             ]);
 
         DB::table('borrows')->insert([

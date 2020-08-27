@@ -62,3 +62,4 @@ Route::post('/update-students/{student_id}', 'admin\StudentsController@update_st
 Route::get('/borrows', 'admin\BorrowsController@index');//Untuk menampilkan halaman daftar peminjaman (borrow)
 Route::get('/add-borrow', 'admin\BorrowsController@add_borrow'); // Untuk menampilkan form tambah peminjaman
 Route::post('/borrows', 'admin\BorrowsController@save_borrow'); // Untuk mengirimkan data peminjaman yang sudah ditambah ke database
+Route::post('/return/{borrow_id}', 'admin\BorrowsController@return'); // Untuk mengirimkan data buku yang sudah di update atau diubah ke database sesuai book_id yang sudah dipilih
