@@ -26,16 +26,33 @@
                     <li class="{{Request::is('users')?'active':''}}"><a href="/users"><i class="zmdi zmdi-account-calendar"></i> <span>Kelola User</span></a></li>
                     <li class="{{Request::is('students')?'active':''}}"><a href="/students"><i class="zmdi zmdi-account-calendar"></i> <span>Kelola Student</span></a></li>
                     <li class="{{Request::is('borrows')?'active':''}}"><a href="/borrows"><i class="fa fa-bookmark-o"></i> <span>Kelola Peminjaman</span></a></li>
+                        
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="">
+                                <div class="" aria-labelledby="">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
 
-                    <li class="treeview">
-                        <a href="javascript:void(0)"><i class="icon_laptop"></i> <span>Apps</span> <i class="fa fa-angle-right"></i></a>
-                        <ul class="treeview-menu">
-                            <li><a href="calendar.html">- Calendar</a></li>
-                            <li><a href="chat-box.html">- Chat box</a></li>
-                            <li><a href="project-list.html">- Project List</a></li>
-                            <li><a href="project-details.html">- Project Details</a></li>
-                        </ul>
-                    </li>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    
                 </ul>
             </nav>
         </div>
