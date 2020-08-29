@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Borrows;
 use App\Models\Students;
 use App\Models\Books;
-// use Auth;
+Use Carbon\Carbon;
 
 class BorrowsController extends Controller
 {
@@ -17,7 +17,10 @@ class BorrowsController extends Controller
 	{
 		$book=Books::all();
         $count = 0;
-		return view('admin/borrows/index', ['borrow' => $book, 'count' => $count]);
+        $borrow_back_date =Carbon::parse(date('Y-m-d', strtotime(Carbon::today()->toDateString())));
+        $fine = 1000;
+        //dd(Carbon::parse($borrow_back_date)->diffInDays($a));
+		return view('admin/borrows/index', ['borrow' => $book, 'count' => $count, 'borrow_back_date' => $borrow_back_date, 'fine' => $fine]);
 	}
 
 	public function book()
@@ -58,40 +61,15 @@ class BorrowsController extends Controller
         } else {
             return redirect()->back()->with('status', 'Jumlah pinjam melebihi stok');;
         }
-
-
-        //dari nti tpi blm selesai      
-    	// $book  			= Book::whereId($book_id)->first();
-    	// $stock 			= $book->stock_book;
-    	// $total_borrow	= $request->input('total_borrow');
-
-    	// if ($stock == 0) {
-    	// 	Session::flash('Gagal Meminjam', 'Melebihi Stok Yang Tersedia');
-    	// 	return redirect('/borrows');
-    	// }elseif ($stock > $total_borrow or $stock == $total_borrow) {
-    	// 	$borrow = new Borrows();
-    	// 	$borrow -> book_id = $book_id;
-    	// }
-
-
-        //yutub
-        // $cek = DB::table('books')->where('book_id', $book_id)->where('stock', '>', 0)->count();
-
-        // if ($cek > 0) {
-        //     DB::table('borrows')->insert([
-        //         'book'=> $book_id,
-        //         'users'=>\Auth::users()->user_id,
-        //         'creted_at'=>date('Y-m-d H:i:s')
-        //         ]);
-        //     Session::flash('Sukses', 'Berhasil Meminjam');
-        //     return redirect('/books');
-        //     echo'Sukses';
-        // }else{
-        //     Session::flash('Gagal', 'Melebihi Stok');
-        //     return redirect('/books');
-        // }
-     //    dd($request->all());
         
+    }
+
+    public function return(Request $request, $borrow_id)
+    {
+        // dd($request->all());
+        $borrow = Borrows::find($borrow_id);
+        $borrow->return_borrow($request->all());
+        return redirect('/borrows');
     }
 
 

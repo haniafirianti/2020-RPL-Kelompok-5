@@ -31,7 +31,7 @@ class Books extends Model
 
     public function students()
     {
-        return $this->belongsToMany('App\Models\students', 'borrows', 'borrow_book_id', 'borrow_student_id')->withPivot('borrow_date', 'borrow_expectation_back_date', 'borrow_back_date', 'borrow_fine', 'borrow_total_books');
+        return $this->belongsToMany('App\Models\students', 'borrows', 'borrow_book_id', 'borrow_student_id')->withPivot('borrow_id', 'borrow_date', 'borrow_expectation_back_date', 'borrow_back_date', 'borrow_fine', 'borrow_total_books');
     }
     
 

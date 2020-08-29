@@ -25,7 +25,7 @@ class CreateBorrowsTable extends Migration
             $table->date('borrow_date');
             $table->date('borrow_expectation_back_date');
             $table->date('borrow_back_date')->nullable();
-            $table->string('borrow_fine')->nullable();
+            $table->string('borrow_fine')->default(0);
             $table->timestamps();
         });
     }

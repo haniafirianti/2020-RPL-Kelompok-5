@@ -21,4 +21,12 @@ class Borrows extends Model
     	return Borrows::create($data);
     }
 
+    public function return_borrow($data)
+    {
+
+        unset($data['borrow_student_id']);
+        unset($data['borrow_book_id']);
+        return Borrows::update($data);
+    }
+
 }
