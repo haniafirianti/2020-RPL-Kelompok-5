@@ -3,12 +3,16 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 
 class Books extends Model
 {
-    protected $table	= 'books';
-    protected $primaryKey = 'book_id';
-    protected $guarded	= [];
+    use SoftDeletes;
+    protected $table	   = 'books';
+    protected $primaryKey  = 'book_id';
+    protected $dates       = ['deleted_at'];
+    protected $guarded	   = [];
 
     public function save_books($data)
     {

@@ -16,14 +16,8 @@
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <div class="dt-buttons btn-group"> 
-                  <a href="/add-students" class="btn btn-outline-success btn-lg fa fa-plus"></a>
+                <a href="/add-students" class="btn btn-outline-success btn-lg fa fa-plus"></a>
               </div>
-                
-              <div class="dt-buttons btn-group"> 
-                <button class="btn btn-outline-warning btn-lg buttons-print fa fa-print" tabindex="0" aria-controls="datatable-buttons" type="button">
-                </button> 
-              </div>
-
             </div>
 
             <div class="col-sm-12 col-md-6">
@@ -47,7 +41,7 @@
                 </thead>
 
                 <tbody>
-                @foreach($student as $count=> $student)
+                  @foreach($student as $count=> $student)
                   <tr>
                     <td>{{$count+1}}</td>
                     <td>{{$student->student_nis}}</td>

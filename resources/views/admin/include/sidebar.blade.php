@@ -25,8 +25,8 @@
                         </div>
                     </li>
                     <li class="{{Request::is('home')?'active':''}}"><a href="/list-book"><i class="fa fa-bars"></i> <span>Daftar Buku </span></a></li>
-                    <li class="{{Request::is('books')?'active':''}}"><a href="/books"><i class="fa fa-book"></i> <span>Kelola Buku</span></a></li>
                     <li class="{{Request::is('publishers')?'active':''}}"><a href="/publishers"><i class="fa fa-pencil"></i> <span>Kelola Penerbit</span></a></li>
+                    <li class="{{Request::is('books')?'active':''}}"><a href="/books"><i class="fa fa-book"></i> <span>Kelola Buku</span></a></li>
                     <li class="{{Request::is('users')?'active':''}}"><a href="/users"><i class="zmdi zmdi-account-calendar"></i> <span>Kelola User</span></a></li>
                     <li class="{{Request::is('students')?'active':''}}"><a href="/students"><i class="zmdi zmdi-account-calendar"></i> <span>Kelola Siswa</span></a></li>
                     <li class="{{Request::is('borrows')?'active':''}}"><a href="/borrows"><i class="fa fa-bookmark-o"></i> <span>Kelola Peminjaman</span></a></li>

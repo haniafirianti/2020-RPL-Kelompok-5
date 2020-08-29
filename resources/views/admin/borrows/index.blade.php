@@ -19,8 +19,6 @@
                 <div class="dt-buttons btn-group"> 
                   <a href="/add-borrow" class="btn btn-outline-success btn-lg fa fa-plus"></a>
                 </div>
-                <button class="btn btn-outline-warning btn-lg buttons-print fa fa-print" tabindex="0" aria-controls="datatable-buttons" type="button">
-                </button> 
               </div>
             </div>
 

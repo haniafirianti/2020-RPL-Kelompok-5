@@ -18,6 +18,7 @@ class CreatePublishersTable extends Migration
             $table->string('publisher_name');
             $table->string('publisher_address');
             $table->timestamps();
+            $table->softdeletes();
         });
     }
 

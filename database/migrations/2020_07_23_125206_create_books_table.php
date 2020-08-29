@@ -22,6 +22,7 @@ class CreateBooksTable extends Migration
             $table->biginteger('book_total');
             $table->string('book_category');
             $table->timestamps();
+            $table->softdeletes();
         });
     }
 

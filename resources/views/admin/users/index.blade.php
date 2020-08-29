@@ -16,14 +16,8 @@
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <div class="dt-buttons btn-group"> 
-                  <a href="/add-users" class="btn btn-outline-success btn-lg fa fa-plus"></a>
+                <a href="/add-users" class="btn btn-outline-success btn-lg fa fa-plus"></a>
               </div>
-                
-              <div class="dt-buttons btn-group"> 
-                <button class="btn btn-outline-warning btn-lg buttons-print fa fa-print" tabindex="0" aria-controls="datatable-buttons" type="button">
-                </button> 
-              </div>
-
             </div>
 
             <div class="col-sm-12 col-md-6">
@@ -37,24 +31,18 @@
                 <thead>
                   <tr role="row">
                     <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 165.8px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">No</th>
-                    <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 118.8px;" aria-label="Office: activate to sort column ascending">NIS</th>
                     <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 51.8px;" aria-label="Age: activate to sort column ascending">NAMA LENGKAP</th>
-                    <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 106.8px;" aria-label="Start date: activate to sort column ascending">KELAS</th>
-                    <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 90.8px;" aria-label="Salary: activate to sort column ascending">NO.HP</th>
-                    <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 90.8px;" aria-label="Salary: activate to sort column ascending">ALAMAT</th>
+                    <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 106.8px;" aria-label="Start date: activate to sort column ascending">Email</th>
                     <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 90.8px;" aria-label="Salary: activate to sort column ascending">Action</th>
                   </tr>
                 </thead>
 
                 <tbody>
-                @foreach($user as $count=> $user)
+                  @foreach($user as $count=> $user)
                   <tr>
                     <td>{{$count+1}}</td>
-                    <td>{{$user->user_nis}}</td>
                     <td>{{$user->user_full_name}}</td>
-                    <td>{{$user->user_class}}</td>
-                    <td>{{$user->user_phone_number}}</td>
-                    <td>{{$user->user_address}}</td>
+                    <td>{{$user->user_email}}</td>
                     <td>
                       <form action="/users/{{$user->user_id}}" method="post">
                         <a href="edit-users/{{$user->user_id}}/edit" class="btn btn-outline-info fa fa-pencil-square-o" ></a>
