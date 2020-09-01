@@ -29,35 +29,38 @@
 
         <!-- Top Bar Nav -->
         <ul class="right-side-content d-flex align-items-center">
+        <li class="fa fa-user-circle">
+        <span style="font-size: 15px; color: #e83e8c; font-weight:bold;">{{Auth::user()->user_full_name}}</span>
+        </li>
             <!-- Full Screen Mode -->
-            <li class="full-screen-mode ml-1">
+            <!-- <li class="full-screen-mode ml-1">
                 <a href="javascript:" id="fullScreenMode"><i class="zmdi zmdi-fullscreen"></i></a>
-            </li>
+            </li> -->
 
-            <li class="nav-item dropdown">
+           <!--  <li class="nav-item dropdown">
                 <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="border-radius-50" src="{{asset('layout/img/member-img/1.png')}}" alt=""></button>
                 <div class="dropdown-menu dropdown-menu-right">
                     <!-- User Profile Area -->
-                    <div class="user-profile-area">
+                    <!-- <div class="user-profile-area">
                         <div class="user-profile-heading">
                             <!-- Thumb -->
-                            <div class="profile-thumbnail">
+                            <!-- <div class="profile-thumbnail">
                                 <img class="border-radius-50" src="{{asset('layout/img/member-img/1.png')}}" alt="">
                             </div>
                             <!-- Profile Text -->
-                            <div class="profile-text">
+                            <!-- div class="profile-text">
                                 <h6>Ajoy Das</h6>
                                 <span>ajoydas@example.com</span>
-                            </div>
-                        </div>
-                        <a href="#" class="dropdown-item"><i class="ti-user text-default" aria-hidden="true"></i> My profile</a>
+                            </div> -->
+                        <!-- /div> -->
+                        <!-- <a href="#" class="dropdown-item"><i class="ti-user text-default" aria-hidden="true"></i> My profile</a>
                         <a href="#" class="dropdown-item"><i class="zmdi zmdi-email-open text-success" aria-hidden="true"></i> Messages</a>
                         <a href="#" class="dropdown-item"><i class="ti-settings text-default" aria-hidden="true"></i> Account settings</a>
                         <a href="#" class="dropdown-item"><i class="ti-heart text-purple" aria-hidden="true"></i> Support</a>
                         <a href="#" class="dropdown-item"><i class="ti-unlink text-warning" aria-hidden="true"></i> Sign-out</a>
-                    </div>
-                </div>
-            </li>
+                    </div> -->
+                <!-- </div>
+            </li>   -->
         </ul>
     </div>
 </header>

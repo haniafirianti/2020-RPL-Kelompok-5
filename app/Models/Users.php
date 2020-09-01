@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Hash;
 class Users extends Model
 {
     use SoftDeletes;
@@ -14,6 +15,7 @@ class Users extends Model
 
     public function save_users($data)
     {
+        $data['user_password'] = hash::make('user_password');
     	return Users::create($data);
     }
 

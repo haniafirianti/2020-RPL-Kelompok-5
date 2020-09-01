@@ -1,5 +1,5 @@
     <!-- Favicon -->
-    <link rel="icon" href="{{asset('template/img/core-img/favicon.png')}}">
+    <link rel="icon" href="{{asset('template/img/logo-img/2tipis.png')}}">
 
     <!-- These plugins only need for the run this page -->
     <link rel="stylesheet" href="{{asset('template/css/default-assets/datatables.bootstrap4.css')}}">

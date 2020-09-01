@@ -10,7 +10,7 @@
   <div class="col-12">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title mb-2">Data student</h4>
+        <h4 class="card-title mb-2">Data Siswa</h4>
         
         <div id="datatable-buttons_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
           <div class="row">

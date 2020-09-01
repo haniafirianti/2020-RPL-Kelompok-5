@@ -9,6 +9,11 @@ use App\Models\Publishers;
 class PublishersController extends Controller
 {
 
+    public function __construct(){
+        $this->middleware('auth');
+        $this->middleware('DisablePreventBack');
+    }
+
     public function index(){
         $publisher=Publishers::all();
     	return view('admin/publishers/index', ['publishers' => $publisher]);
@@ -47,5 +52,4 @@ class PublishersController extends Controller
         $publisher->delete();
         return redirect('/publishers/');
     }
-
 }

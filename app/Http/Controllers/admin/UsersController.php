@@ -8,6 +8,10 @@ use App\Models\Users;
 
 class UsersController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+        $this->middleware('DisablePreventBack');
+    }
 
      public function index(){
         $user=Users::all();

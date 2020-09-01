@@ -22,28 +22,8 @@
             </div>
 
             <div class="form-group">
-              <label for="exampleInputEmail111">NOMOR INDUK SISWA</label>
-              <input type="text" name="user_nis" class="form-control" value="{{$user -> user_nis}}">
-            </div>
-
-            <div class="form-group">
               <label for="exampleInputEmail111">NAMA LENGKAP</label>
               <input type="text" name="user_full_name" class="form-control" value="{{$user ->user_full_name}}">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail111">KELAS</label>
-              <input type="text" name="user_class" class="form-control" value="{{$user->user_class}}">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail111">NO.HP</label>
-              <input type="text" name="user_phone_number" class="form-control" value="{{$user -> user_phone_number}}">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail111">ALAMAT</label>
-              <input type="text" name="user_address" class="form-control" value="{{$user -> user_address}}">
             </div>
 
             <button type="submit" class="btn btn-success mr-2">Submit</button>

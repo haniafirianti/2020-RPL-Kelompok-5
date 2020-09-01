@@ -9,9 +9,16 @@ use App\Models\Publishers;
 
 class BooksController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth');
+        $this->middleware('DisablePreventBack');
+    }
+    
 	 public function index(){
         $book=Books::all();
-        return view('admin/books/index', ['books' => $book]);
+        $count = 0;
+        return view('admin/books/index', ['books' => $book, 'count' => $count]);
     }
 
     public function add_books(){
@@ -23,8 +30,8 @@ class BooksController extends Controller
         $this->validate($request, [
             'book_title'            => 'required|min:3',
             'book_publisher_id'     => 'required',
-            'book_page_total'       => 'required',
-            'book_total'            => 'required',
+            'book_page_total'       => 'required|min:5',
+            'book_total'            => 'required|min:0',
             'book_category'         => 'required',
             ]);
         
@@ -41,6 +48,14 @@ class BooksController extends Controller
     }
 
     public function update_books(Request $request, $book_id){
+        $this->validate($request, [
+            'book_title'            => 'required|min:3',
+            'book_publisher_id'     => 'required',
+            'book_page_total'       => 'required|numeric|min:10',
+            'book_total'            => 'required|numeric|min:0',
+            'book_category'         => 'required',
+            ]); 
+        
     	$book = Books::find($book_id);
     	$book->update_books($request->all());
     	return redirect('/books/');
@@ -56,6 +71,7 @@ class BooksController extends Controller
     public function list_book()
     {
         $book=Books::all();
-        return view('admin/books/list-book', ['books' => $book]);
+        $count = 0;
+        return view('admin/books/list-book', ['books' => $book, 'count' => $count]);
     }
 }

@@ -9,6 +9,11 @@ use App\Models\Students;
 
 class StudentsController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+        $this->middleware('DisablePreventBack');
+    }
+    
     public function index(){
         $student=Students::all();
         return view('admin/students/index', ['student' => $student]);

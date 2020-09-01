@@ -21,7 +21,7 @@ Auth::routes(['register'=>false]); // Kode Untuk Autentifikasi seperti, Login, R
 
 Route::get('/home', 'HomeController@index'); // Untuk menampilkan halaman home
 
-Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => 'auth', 'DisablePreventBack'], function () {
 
 //Line 26 sampai line 32 route untuk book
 Route::get('/books', 'admin\BooksController@index'); // Untuk menampilkan halaman daftar buku (book)

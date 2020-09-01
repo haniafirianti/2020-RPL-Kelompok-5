@@ -42,9 +42,10 @@
               </thead>
 
               <tbody>
-                @foreach($books as $count=> $book)
+                @foreach($books as $book)
+                @if($book->publisher)
                 <tr>
-                  <td>{{$count+1}}</td>
+                  <td>{{++$count}}</td>
                   <td>{{$book->book_title}}</td>
                   <td>{{$book->publisher->publisher_name}}</td> 
                   <td>{{$book->book_page_total}}</td> 
@@ -59,6 +60,7 @@
                     </form>
                   </td>
                 </tr>
+                @endif
                 @endforeach    
               </tbody>
             </table>
