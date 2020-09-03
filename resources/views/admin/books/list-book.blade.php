@@ -14,10 +14,6 @@
         <div id="datatable-buttons_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
           <div class="row">
             <div class="col-sm-12 col-md-6">
-              <div class="dt-buttons btn-group"> 
-                <a href="/add-books" class="btn btn-outline-success btn-lg fa fa-plus"></a>
-              </div> 
-            </div>
 
           </div>
 
@@ -42,7 +38,6 @@
 
               <tbody>
                 @foreach($books as $book)
-                @if($book->publisher)
                 <tr>
                   <td>{{++$count}}</td>
                   <td>{{$book->book_title}}</td>
@@ -51,7 +46,6 @@
                   <td>{{$book->book_total}}</td> 
                   <td>{{$book->book_category}}</td> 
                 </tr>
-                @endif
                 @endforeach    
               </tbody>
             </table>
@@ -68,62 +62,5 @@
     </div> <!-- end card body-->
   </div> <!-- end card -->
 </div><!-- end col-->
-</div>
-</div>
+
 @endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- @extends('admin.layouts.master')
-
-@push('title')
-- Book
-@endpush
-
-@section('content')
-<div class="row">
-  @foreach($books as $book)      
-  <div class="col-xl-3 col-md-6">
-    <div class="card">
-      <div class="card-body">
-        <img class="card-img-top img-fluid" src="{{asset('template/img/gallery-img/5.jpg')}}" alt="Card image cap">
-        <h5 class="font-20 mt-15 mb-1">{{$book->book_title}}</h5>
-        <div class="card-btns d-flex justify-content-between mt-30">
-          <a href="/add-borrow" class="btn btn-outline-info">Pinjam Buku</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  @endforeach
-</div>
-@endsection -->

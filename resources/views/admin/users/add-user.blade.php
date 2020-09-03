@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @push('title')
-- Book
+- User
 @endpush
 @section('content')
 <div class="row">
@@ -32,13 +32,19 @@
 						</div>
 
 						<div class="form-group">
-							<label for="exampleInputEmail111">PASSWORD</label>
-							<input type="password" name="user_password" class="form-control @error('user_password') is-invalid @enderror" value="{{ old('user_password') }}">
+							<label for="user_password">PASSWORD</label>
+							<input id="user_password" type="password" name="user_password" class="form-control @error('user_password') is-invalid @enderror" value="{{ old('user_password') }}" required autocomplete="new-password">
 							@error('user_password')
 							<span class="invalid-feedback" role="alert">
 								<strong>{{ $message }}</strong>
 							</span>
 							@enderror
+						</div>
+
+						<div class="form-group">
+							<label for="password-confirm">CONFIRM PASSWORD</label>
+							<input  id="password-confirm" type="password" name="password_confirmation" required autocomplete="new-password" class="form-control">
+							
 						</div>
 						
 						<button type="submit" class="btn btn-success mr-2">Submit</button>

@@ -30,8 +30,8 @@ class BooksController extends Controller
         $this->validate($request, [
             'book_title'            => 'required|min:3',
             'book_publisher_id'     => 'required',
-            'book_page_total'       => 'required|min:5',
-            'book_total'            => 'required|min:0',
+            'book_page_total'       => 'required|numeric|min:10',
+            'book_total'            => 'required|numeric|min:0',
             'book_category'         => 'required',
             ]);
         

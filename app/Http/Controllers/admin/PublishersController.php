@@ -25,7 +25,7 @@ class PublishersController extends Controller
 
     public function save_publishers(Request $request){
         $this->validate($request, [
-            'publisher_name'    => 'required',
+            'publisher_name'    => 'required|unique:publishers,publisher_name',
             'publisher_address' => 'required',
             ]);
         
@@ -46,10 +46,4 @@ class PublishersController extends Controller
     	return redirect('/publishers/');
     }
 
-    public function destroy($publisher_id)
-    {
-        $publisher = Publishers::find($publisher_id);
-        $publisher->delete();
-        return redirect('/publishers/');
-    }
 }

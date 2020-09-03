@@ -24,9 +24,9 @@ class UsersController extends Controller
 
     public function save_users(Request $request){
         $this->validate($request, [
-            'user_email'        => 'required',
+            'user_email'        => 'required|string|max:255|unique:users,user_email',
             'user_full_name'    => 'required',
-            'user_password'     => 'required|min:8',
+            'user_password'     => 'required|string|min:8|same:password_confirmation',
             ]);
     	$user = new Users;
     	$user->save_users($request->all());

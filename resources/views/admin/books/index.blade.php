@@ -43,7 +43,6 @@
 
               <tbody>
                 @foreach($books as $book)
-                @if($book->publisher)
                 <tr>
                   <td>{{++$count}}</td>
                   <td>{{$book->book_title}}</td>
@@ -60,7 +59,6 @@
                     </form>
                   </td>
                 </tr>
-                @endif
                 @endforeach    
               </tbody>
             </table>

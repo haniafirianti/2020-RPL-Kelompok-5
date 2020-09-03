@@ -13,9 +13,17 @@ class Users extends Model
     protected $dates       = ['deleted_at'];
     protected $guarded	= [];
 
+    public function getAuthPassword()
+    {
+        return $this->user_password;
+    }
+
+    
     public function save_users($data)
     {
-        $data['user_password'] = hash::make('user_password');
+        $data['user_password'] = hash::make($data['user_password']);
+        
+        unset($data['password_confirmation']);
     	return Users::create($data);
     }
 

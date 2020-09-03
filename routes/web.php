@@ -37,7 +37,6 @@ Route::get('/list-book', 'admin\BooksController@list_book'); // Untuk menampilka
 Route::get('/publishers', 'admin\PublishersController@index'); //Untuk menampilkan halaman daftar penerbit (publisher)
 Route::get('/add-publishers', 'admin\PublishersController@add_publishers');// Untuk menampilkan form tambah penerbit
 Route::post('/publishers', 'admin\PublishersController@save_publishers');// Untuk mengirimkan data penerbit yang sudah ditambah ke database
-Route::delete('/publishers/{publisher_id}', 'admin\PublishersController@destroy'); // Untuk menghapus data penerbit yang ada sesuai publisher_id yang sudah dipilih
 Route::get('/edit-publishers/{publisher_id}/edit', 'admin\PublishersController@edit_publishers');// Untuk menampilkan form Edit penerbit yang ada sesuai publisher_id yang sudah dipilih
 Route::post('/update-publishers/{publisher_id}', 'admin\PublishersController@update_publishers');// Untuk mengirimkan data penerbit yang sudah di update atau diubah ke database sesuai publisher_id yang sudah dipilih
 

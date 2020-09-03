@@ -45,12 +45,7 @@
                   <td>{{$publisher->publisher_name}}</td>
                   <td>{{$publisher->publisher_address}}</td> 
                   <td>
-                    <form action="/publishers/{{$publisher->publisher_id}}" method="post">
                       <a href="edit-publishers/{{$publisher->publisher_id}}/edit" value="EDIT" class="btn btn-outline-info fa fa-pencil-square-o"></a>
-                      <button type="submit" name="submit" class="btn btn-outline-danger fa fa-trash-o"></button>
-                      {{csrf_field()}}
-                      <input type="hidden" name="_method" value="DELETE">
-                    </form>
                   </td>
                   @endforeach    
                 </tbody>
