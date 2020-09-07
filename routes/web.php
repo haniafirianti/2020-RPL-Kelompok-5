@@ -13,7 +13,7 @@
 */
 //Line 15 sampai line 17 route untuk menampilkan tampilan awal saat membuka web
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 }); 
 
 Auth::routes(['register'=>false]); // Kode Untuk Autentifikasi seperti, Login, Registrasi, Logout

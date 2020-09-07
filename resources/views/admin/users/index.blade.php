@@ -44,12 +44,16 @@
                     <td>{{$user->user_full_name}}</td>
                     <td>{{$user->user_email}}</td>
                     <td>
+                    @if(Auth::user()->user_email == $user->user_email)
+                      <a href="edit-users/{{$user->user_id}}/edit" class="btn btn-outline-info fa fa-pencil-square-o" ></a>
+                    @else
                       <form action="/users/{{$user->user_id}}" method="post">
                         <a href="edit-users/{{$user->user_id}}/edit" class="btn btn-outline-info fa fa-pencil-square-o" ></a>
                         <button type="submit" name="submit" class="btn btn-outline-danger fa fa-trash-o"></button>
                         {{csrf_field()}}
                         <input type="hidden" name="_method" value="DELETE">
                       </form>
+                    @endif
                     </td>
                     @endforeach    
                   </tbody>

@@ -63,7 +63,7 @@
 						</div>
 						
 						<button type="submit" class="btn btn-success mr-2">Submit</button>
-						<button type="back" class="btn btn-dark">Cancel</button>
+						<a href="/students" class="btn btn-dark">Cancel</a>
 						{{csrf_field()}}
 					</form>
 				</div>

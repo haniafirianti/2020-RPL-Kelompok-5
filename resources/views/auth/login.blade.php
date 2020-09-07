@@ -2,10 +2,13 @@
 
 @section('content')
 <div class="container">
+    @if(Session::has('error'))
+        <div class="alert alert-danger">{{Session::get('error')}}</div>
+    @endif
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <center><div class="card-header">{{ __('LOGIN') }}</div></center>
+                <div class="card-header">{{ __('LOGIN') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -17,7 +20,7 @@
                             <div class="col-md-6">
                                 <input id="user_email" type="email" class="form-control @error('email') is-invalid @enderror" name="user_email" value="{{ old('user_email') }}" required autocomplete="user_email" autofocus>
 
-                                @error('email')
+                                @error('user_email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
