@@ -35,12 +35,18 @@
 						<div class="form-group">
 							<label for="exampleInputEmail111">KELAS</label>
 							<select name="student_class" class="form-control @error('student_class') is-invalid @enderror" value="{{ old('student_class') }}">
-								<option>X RPL</option>
-								<option>X MM</option>
-								<option>XI RPL</option>
-								<option>XI MM</option>
-								<option>XII RPL</option>
-								<option>XII MMM</option>
+								<option>X RPL 1</option>
+								<option>X RPL 2</option>
+								<option>X MM 1</option>
+								<option>X MM 2</option>
+								<option>XI RPL 1</option>
+								<option>XI RPL 2</option>
+								<option>XI MM 1</option>
+								<option>XI MM 2</option>
+								<option>XII RPL 1</option>
+								<option>XII RPL 2</option>
+								<option>XII MM 1</option>
+								<option>XII MM 2</option>
 							</select>
 							@error('student_class')
 							<span class="invalid-feedback" role="alert">
