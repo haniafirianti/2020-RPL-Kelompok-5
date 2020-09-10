@@ -41,6 +41,10 @@ class PublishersController extends Controller
     }
 
     public function update_publishers(Request $request, $publisher_id){
+        $this->validate($request, [
+            'publisher_address' => 'required',
+            ]);
+        
     	$publisher = Publishers::find($publisher_id);
     	$publisher->update_publishers($request->all());
     	return redirect('/publishers');

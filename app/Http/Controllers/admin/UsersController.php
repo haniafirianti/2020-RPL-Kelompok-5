@@ -40,6 +40,11 @@ class UsersController extends Controller
     }
 
     public function update_users(Request $request, $user_id){
+        $this->validate($request, [
+            'user_email'        => 'required',
+            'user_full_name'    => 'required',
+            'user_password'     => 'required|min:8',
+            ]);
     	$user = Users::find($user_id);
     	$user->update_users($request->all());
     	return redirect('/users/');

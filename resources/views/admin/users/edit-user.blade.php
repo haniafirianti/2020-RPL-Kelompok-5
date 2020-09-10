@@ -13,17 +13,32 @@
           <form action="/update-users/{{$user->user_id}}" method="POST">
             <div class="form-group">
               <label for="exampleInputEmail111">EMAIL</label>
-              <input type="text" name="user_email" class="form-control" value="{{$user -> user_email}}">
+              <input type="text" name="user_email" value="{{$user -> user_email}}" class="form-control @error('user_email') is-invalid @enderror" value="{{ old('user_email') }}">
+              @error('user_email')
+              <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+              @enderror
             </div>
 
             <div class="form-group">
               <label for="exampleInputEmail111">PASSWORD</label>
-              <input type="text" name="user_password" class="form-control" value="{{$user -> user_password}}">
+              <input type="text" name="user_password" value="{{$user -> user_password}}" class="form-control @error('user_password') is-invalid @enderror" value="{{ old('user_email') }}">
+              @error('user_password')
+              <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+              @enderror
             </div>
 
             <div class="form-group">
               <label for="exampleInputEmail111">NAMA LENGKAP</label>
-              <input type="text" name="user_full_name" class="form-control" value="{{$user ->user_full_name}}">
+              <input type="text" name="user_full_name" value="{{$user ->user_full_name}}" class="form-control @error('user_full_name') is-invalid @enderror" value="{{ old('user_email') }}">
+              @error('user_full_name')
+              <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+              @enderror
             </div>
 
             <button type="submit" class="btn btn-success mr-2">Submit</button>

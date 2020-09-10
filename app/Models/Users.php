@@ -29,6 +29,7 @@ class Users extends Model
 
     public function update_users($data)
     {
+        $data['user_password'] = hash::make($data['user_password']);
     	return Users::update($data);
     }
 

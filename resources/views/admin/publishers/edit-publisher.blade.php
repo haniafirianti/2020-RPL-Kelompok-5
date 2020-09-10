@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @push('title')
-- Book
+- Publisher
 @endpush
 @section('content')
 <div class="row">
@@ -13,12 +13,17 @@
           <form action="/update-publishers/{{$publisher->publisher_id}}" method="POST">
             <div class="form-group">
               <label for="exampleInputEmail111">NAMA PENERBIT</label>
-              <input type="text" name="publisher_name" class="form-control" readonly="" value="{{$publisher -> publisher_name}}">
-            </div>
+              <input type="text" name="publisher_name" readonly="" value="{{$publisher -> publisher_name}}" class="form-control">
+            </div>       
 
             <div class="form-group">
               <label for="exampleInputEmail111">ALAMAT PENERBIT</label>
-              <input type="text" name="publisher_address" class="form-control" value="{{$publisher -> publisher_address}}">
+              <input type="text" name="publisher_address" value="{{$publisher -> publisher_address}}" class="form-control @error('publisher_address') is-invalid @enderror" value="{{ old('publisher_address') }}">
+                            @error('publisher_address')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
             </div>
 
             <button type="submit" class="btn btn-success mr-2">Submit</button>

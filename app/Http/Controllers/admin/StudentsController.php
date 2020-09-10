@@ -43,6 +43,14 @@ class StudentsController extends Controller
     }
 
     public function update_students(Request $request, $student_id){
+        $this->validate($request, [
+            'student_nis'          => 'required',
+            'student_full_name'    => 'required',
+            'student_class'        => 'required',
+            'student_phone_number' => 'required',
+            'student_address'      => 'required',
+            ]);
+        
         $student = students::find($student_id);
         $student->update_students($request->all());
         return redirect('/students/');
