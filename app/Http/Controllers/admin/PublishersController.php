@@ -43,7 +43,7 @@ class PublishersController extends Controller
     public function update_publishers(Request $request, $publisher_id){
     	$publisher = Publishers::find($publisher_id);
     	$publisher->update_publishers($request->all());
-    	return redirect('/publishers/');
+    	return redirect('/publishers');
     }
 
 }

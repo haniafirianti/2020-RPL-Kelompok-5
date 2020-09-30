@@ -68,6 +68,21 @@ class BooksController extends Controller
         return redirect('/books');
     }
 
+    public function trash()
+    {
+       $trash=Books::onlyTrashed()->get();
+       $count=0;
+       return view('admin.books.trash', compact('trash','count'));
+    }
+
+    public function restore($book_id)
+    {
+       $restore=Books::onlyTrashed()->where('book_id', $book_id);
+       $restore->restore();
+       return redirect('/books');
+
+    }
+
     public function list_book()
     {
         $book=Books::all();

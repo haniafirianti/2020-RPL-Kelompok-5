@@ -28,6 +28,10 @@ Route::get('/books', 'admin\BooksController@index'); // Untuk menampilkan halama
 Route::get('/add-books', 'admin\BooksController@add_books'); // Untuk menampilkan form tambah buku
 Route::post('/books', 'admin\BooksController@save_books'); // Untuk mengirimkan data buku yang sudah ditambah ke database
 Route::delete('/books/{book_id}', 'admin\BooksController@destroy'); // Untuk menghapus data buku yang ada sesuai book_id yang sudah dipilih
+Route::get('/books/trash', 'admin\BooksController@trash');
+
+Route::get('/books/restore/{book_id}', 'admin\BooksController@restore');
+
 Route::get('/edit-books/{book_id}/edit', 'admin\BooksController@edit_books'); // Untuk menampilkan form Edit buku yang ada sesuai book_id yang sudah dipilih
 Route::post('/update-books/{book_id}', 'admin\BooksController@update_books'); // Untuk mengirimkan data buku yang sudah di update atau diubah ke database sesuai book_id yang sudah dipilih
 Route::get('/list-book', 'admin\BooksController@list_book'); // Untuk menampilkan halaman daftar buku (book) dalam bentuk card

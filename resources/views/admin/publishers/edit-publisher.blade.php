@@ -13,7 +13,7 @@
           <form action="/update-publishers/{{$publisher->publisher_id}}" method="POST">
             <div class="form-group">
               <label for="exampleInputEmail111">NAMA PENERBIT</label>
-              <input type="text" name="publisher_name" class="form-control" value="{{$publisher -> publisher_name}}">
+              <input type="text" name="publisher_name" class="form-control" readonly="" value="{{$publisher -> publisher_name}}">
             </div>
 
             <div class="form-group">

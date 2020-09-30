@@ -9,17 +9,12 @@
   <div class="col-12">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title mb-2">Data Buku</h4>
+        <h4 class="card-title mb-2">Data Trash</h4>
         
         <div id="datatable-buttons_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
           <div class="row">
             <div class="col-sm-12 col-md-6">
-              <div class="dt-buttons btn-group"> 
-                <a href="/add-books" class="btn btn-outline-success btn-lg fa fa-plus"></a>
-              </div>
-              <div class="dt-buttons btn-group">
-              <a href="/books/trash" class="btn btn-outline-warning btn-lg fa fa-trash-o"></a>
-              </div>
+                <a href="/books" class="btn btn-danger">Cancel</a>
             </div>
 
           </div>
@@ -45,22 +40,15 @@
               </thead>
 
               <tbody>
-                @foreach($books as $book)
+                @foreach($trash as $trash)
                 <tr>
                   <td>{{++$count}}</td>
-                  <td>{{$book->book_title}}</td>
-                  <td>{{$book->publisher->publisher_name}}</td> 
-                  <td>{{$book->book_page_total}}</td> 
-                  <td>{{$book->book_total}}</td> 
-                  <td>{{$book->book_category}}</td> 
-                  <td>
-                    <form action="/books/{{$book->book_id}}" method="post">
-                      <a href="edit-books/{{$book->book_id}}/edit" class="btn btn-outline-info fa fa-pencil-square-o" ></a>
-                      <button type="submit" name="submit" class="btn btn-outline-danger fa fa-trash-o"></button>
-                      {{csrf_field()}}
-                      <input type="hidden" name="_method" value="DELETE">
-                    </form>
-                  </td>
+                  <td>{{$trash->book_title}}</td>
+                  <td>{{$trash->publisher->publisher_name}}</td> 
+                  <td>{{$trash->book_page_total}}</td> 
+                  <td>{{$trash->book_total}}</td> 
+                  <td>{{$trash->book_category}}</td> 
+                  <td><a href="/books/restore/{{$trash->book_id}}" class="btn btn-success btn-sm">Restore</a></td>
                 </tr>
                 @endforeach    
               </tbody>

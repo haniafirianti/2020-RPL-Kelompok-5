@@ -72,7 +72,7 @@ $(".js-example-placeholder-single").select2({
 
                         <div class="form-group">
                             <label for="exampleInputEmail111">Tanggal Pinjam</label>
-                            <input type="date" class="form-control @error('borrow_date') is-invalid @enderror" name="borrow_date" value="{{ date('Y-m-d', strtotime(Carbon\Carbon::today()->toDateString())) }}" required>
+                            <input type="date" class="form-control @error('borrow_date') is-invalid @enderror" name="borrow_date" readonly="" value="{{ date('Y-m-d', strtotime(Carbon\Carbon::today()->toDateString())) }}" required>
                             @error('borrow_date')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
